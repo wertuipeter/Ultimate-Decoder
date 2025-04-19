@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Ultimate_Decoder {
+
+    public static void main(String[] args) {
+        // Calling the Caesar Cipher function to start the program
+        CeaserCipher();
+    }
+
+    public static void CeaserCipher() {
+        String s = "";
+        Scanner sc = new Scanner(System.in);
+
+        // Prompt user to check if they have a key
+        System.out.print("Do you have a key on how many letters to shift? (y/n): ");
+        String key = sc.nextLine();
+
+        if (key.equals("y")) {
+            System.out.print("Enter the key: ");
+            int k = sc.nextInt();
+            sc.nextLine(); // Consume the newline character
+            System.out.print("Enter the string to be decoded: ");
+            s = sc.nextLine();
+
+            // Decode using the provided key
+            StringBuilder decoded = new StringBuilder();
+            for (int i = 0; i < s.length(); i++) {
+                char c = s.charAt(i);
+                if (Character.isLetter(c)) {
+                    char base = Character.isLowerCase(c) ? 'a' : 'A';
+                    c = (char) ((c - base - k + 26) % 26 + base);
+                }
+                decoded.append(c);
+            }
+            System.out.println("Decoded message: " + decoded.toString());
+        } else {
+            // If no key is provided, try all possible shifts (0 to 25)
+            System.out.print("Enter the string to be decoded: ");
+            s = sc.nextLine();
+
+            // Attempt decoding with all shifts
+            for (int i = 0; i < 26; i++) {
+                StringBuilder decoded = new StringBuilder();
+                for (int j = 0; j < s.length(); j++) {
+                    char c = s.charAt(j);
+                    if (Character.isLetter(c)) {
+                        char base = Character.isLowerCase(c) ? 'a' : 'A';
+                        c = (char) ((c - base - i + 26) % 26 + base);
+                    }
+                    decoded.append(c);
+                }
+                System.out.println("Decoded with key " + i + ": " + decoded.toString());
+            }
+        }
+    }
+}
