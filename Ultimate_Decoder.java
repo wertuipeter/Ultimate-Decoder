@@ -14,7 +14,7 @@ Last updated: 19.04.2025
 */ 
 
 
- import java.util.Scanner;
+import java.util.Scanner;
 
 public class Ultimate_Decoder {
 
