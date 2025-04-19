@@ -7,3 +7,4 @@
 ## Features
 
 - **Caesar Cipher Decoding**: Decrypt messages with the Caesar Cipher.
+- **Atbash Cipher Decoding**: Decrypt messages with the Atbash Cipher.
