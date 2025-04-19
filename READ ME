@@ -6,4 +6,5 @@
 
 ## Features
 
-- **Caesar Cipher Encoding & Decoding**: Decrypt messages with the Caesar Cipher.
+- **Caesar Cipher Decoding**: Decrypt messages with the Caesar Cipher.
+- **Atbash Cipher Decoding**: Decrypt messages with the Atbash Cipher.
