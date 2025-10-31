@@ -8,3 +8,4 @@
 
 - **Caesar Cipher Decoding**: Decrypt messages from Caesar Cipher.
 - **Atbash Cipher Decoding**: Decrypt messages from Atbash Cipher.
+- **Vigenère Cipher Decoding**: Decrypt messages from Vigenère Cipher.
